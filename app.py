@@ -10,7 +10,7 @@ from datasets import load_dataset
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 
-# Load environment variables from .env file
+# Load environment variables from .env file (for local development)
 load_dotenv()
 
 # Set up page config with custom styling
@@ -203,7 +203,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# API configuration
+# API configuration - works for both local and Hugging Face deployment
 api_key = os.environ.get("NEBIUS_API_KEY")
 
 if not api_key:
@@ -211,7 +211,8 @@ if not api_key:
         """
     <div class="error-card">
         <h3>🔑 API Key Configuration Required</h3>
-        <p>Please configure your Nebius API key to get started:</p>
+        
+        <h4>For Local Development:</h4>
         <ol>
             <li>Open the <code>.env</code> file in your project directory</li>
             <li>Replace <code>your_api_key_here</code> with your actual Nebius API key</li>
@@ -219,6 +220,16 @@ if not api_key:
         </ol>
         <p><strong>Example .env file:</strong></p>
         <pre>NEBIUS_API_KEY=your_actual_api_key_here</pre>
+        
+        <h4>For Hugging Face Spaces Deployment:</h4>
+        <ol>
+            <li>Go to your Space settings</li>
+            <li>Navigate to the "Variables and secrets" section</li>
+            <li>Add a new secret: <code>NEBIUS_API_KEY</code> with your API key value</li>
+            <li>Restart your Space</li>
+        </ol>
+        
+        <p><em>💡 The app will automatically detect the environment and use the appropriate method.</em></p>
     </div>
     """,
         unsafe_allow_html=True,
