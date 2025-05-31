@@ -25,7 +25,6 @@ This Streamlit application uses an LLM-powered agent to analyze the Bitext Custo
    ```
    streamlit run app.py
    ```
-4. Enter your OpenAI API key when prompted
 
 ## Example Questions
 
