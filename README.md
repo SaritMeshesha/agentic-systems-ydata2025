@@ -1,42 +1,72 @@
-# LLM-powered Data Analyst Agent
+---
+title: LLM Data Analyst Agent
+emoji: 🤖
+colorFrom: blue
+colorTo: green
+sdk: streamlit
+sdk_version: 1.32.0
+app_file: app.py
+pinned: false
+license: apache-2.0
+---
 
-This Streamlit application uses an LLM-powered agent to analyze the Bitext Customer Support LLM Chatbot Training Dataset. The agent can answer user questions about the dataset, performing both structured (quantitative) and unstructured (qualitative) analysis.
+# 🤖 LLM-powered Data Analyst Agent
 
-## Features
+An intelligent data analysis assistant that helps you explore and understand customer support datasets using advanced language models.
 
-- Ask questions about the customer support dataset
-- Support for different types of analysis:
-  - Structured (Quantitative): Category frequencies, examples, intent distributions
-  - Unstructured (Qualitative): Summarize categories, analyze intents
-- Scope detection to identify if questions are answerable from the dataset
-- Support for follow-up questions
-- Toggle between planning modes:
-  - Pre-planning + Execution: First classify the question, then execute the response
-  - ReActive Dynamic Planning: Let the LLM dynamically plan and execute the response
+## 🌟 Features
 
-## Setup
+- **Interactive Data Analysis**: Ask questions in natural language and get intelligent responses
+- **Multiple Planning Modes**: Choose between pre-planning and reactive dynamic planning
+- **Beautiful UI**: Modern, responsive interface with custom styling
+- **Real-time Conversations**: Chat-like interface for seamless interaction
+- **Dataset Insights**: Automatic analysis of customer support conversations
 
-1. Clone this repository
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Run the Streamlit app:
-   ```
-   streamlit run app.py
-   ```
+## 🚀 How to Use
 
-## Example Questions
+1. **Ask Questions**: Type your question about the customer support data
+2. **Get Insights**: The AI will analyze the data and provide detailed answers
+3. **Explore Further**: Follow up with additional questions for deeper analysis
 
-- "What are the most frequent categories?"
-- "Show examples of billing category"
-- "What categories exist in the dataset?"
-- "Summarize the technical support category"
-- "What are the common intents in the billing category?"
-- "How do agents typically respond to refund requests?"
+### Example Questions:
+- "What are the most common customer issues?"
+- "Show me examples of billing problems"
+- "What's the distribution of customer intents?"
+- "Summarize the main categories of support requests"
 
-## Requirements
+## 🛠️ Technology Stack
 
-- Python 3.8+
-- OpenAI API key (gpt-4o model access)
-- Internet connection (to download the dataset) 
+- **Frontend**: Streamlit with custom CSS styling
+- **AI Model**: Nebius API (Qwen/Qwen3-30B-A3B)
+- **Data Processing**: Pandas for data manipulation
+- **Dataset**: Bitext Customer Support Dataset
+
+## 📊 Dataset
+
+This app analyzes the [Bitext Customer Support Dataset](https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset) which contains real customer support conversations with:
+
+- **Categories**: Different types of customer issues
+- **Intents**: Specific customer intentions  
+- **Customer Messages**: Original customer inquiries
+- **Agent Responses**: Support agent replies
+
+## 🔧 Configuration
+
+The app requires a Nebius API key to function. This has been configured as an environment variable for this Space.
+
+## 💡 Tips
+
+- **Be Specific**: More specific questions often yield better insights
+- **Explore Different Angles**: Try both quantitative ("how many") and qualitative ("why") questions
+- **Use Follow-ups**: Build on previous answers for deeper analysis
+
+## 🎯 Planning Modes
+
+- **Pre-planning**: The agent first classifies your question, then executes analysis
+- **Reactive Planning**: The agent dynamically decides how to approach your question
+
+Choose the mode that works best for your analysis style!
+
+---
+
+*Built with ❤️ using Streamlit and powered by advanced language models* 
