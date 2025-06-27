@@ -13,6 +13,7 @@ license: apache-2.0
 # 🤖 LLM-powered Data Analyst Agent
 
 An intelligent data analysis assistant that helps you explore and understand customer support datasets using advanced language models.
+https://huggingface.co/spaces/SaritMeshesha/llm-data-analyst
 
 ## 🌟 Features
 
